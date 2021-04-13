@@ -1,24 +1,35 @@
+
+/* assigning default font and variable fonts */
 :root {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    background-color: white;
+    background-color:  rgba(238, 238, 247, 1);
+    --primary: rgba(68, 88, 119, 1);
+    --secondary: rgba(146, 204, 206, 1);
+    --tertiary: rgba(49, 52, 61, 1);
+    --dark: rgba(28, 29, 33, 1);
+    --light: rgba(238, 238, 247, 1);
+
 }
 
+/* change boxes to border box  */
 * {
   box-sizing: border-box;
 }
 
+/* change elements  to flex box and assign backgrounds */
 body {
     display: flex;
     flex-wrap: wrap;
 }
 
 header {
-    display: block;
-    background-color: teal;
+    display: flex;
+    flex-direction: column;
     height: 125px;
     width: 100%;
     margin-bottom: 30px;
+    background-image: url("../images/milky-way-2695569_960_720.jpeg");
 }
 
 nav {
@@ -29,6 +40,9 @@ nav {
 
 .left-heading {
     display: flex;
+    color: white;
+    border-bottom: 5px solid white;
+    
 }
 
 .portfolio {
@@ -36,7 +50,11 @@ nav {
 } 
 
 .portfolio a {
+    display: flex;
     margin-right: 20px;
+    color: white;
+    align-items: flex-end;
+    padding-bottom: 20px;
 }
 
 
@@ -47,25 +65,18 @@ main {
     width: 100%;
     height: 100%;
     justify-content: space-between;
+    font-size: 19px;
 }
 
-section {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
 
-section h2 {
-    width: 20%;
-}
 
 .about-me  {
-    width: 100%;
+    width: 80%;
     height: 200px;
-    background-color: burlywood;
     margin-bottom: 20px;
     padding: 20px;
     -ms-flex-item-align: end;
+    color: var(--primary);
 }
 
 .four-categories {
@@ -76,18 +87,60 @@ section h2 {
 }
 
 .box {
+    display: flex;
     height: 300px;
-    width: 48%;
-    background-color: coral;
+    width: 35%;
+    background-color: var(--light);
+    color: red;
     padding: 50px;
     margin-bottom: 20px;
 }
 
-.Name {
-    font-size: 20px;
-    position: relative;
-    
+/* assign background images to each project  */
+
+#box-1 {
+    background-image: url("../images/Untitled-2.png");
+    text-decoration: none;
+    font-size: 18px;
+    background-repeat: no-repeat;
+    background-size: 340px 400px;
+    background-position: center;
 }
+
+#box-2 {
+    background-image: url("../images/02-portfolio-2.jpg");
+    text-decoration: none;
+    font-size: 18px;
+    background-repeat: no-repeat;
+    background-size: 340px 400px;
+    background-position: center;
+}
+
+#box-3 {
+    background-image: url("../images/02-portfolio-3.jpg");
+    text-decoration: none;
+    font-size: 18px;
+    background-repeat: no-repeat;
+    background-size: 340px 400px;
+    background-position: center;
+}
+
+#box-4 {
+    background-image: url("../images/02-portfolio-4.jpg");
+    text-decoration: none;
+    font-size: 18px;
+    background-repeat: no-repeat;
+    background-size: 340px 400px;
+    background-position: center;
+}
+
+/* change background after hovering  */
+.hover-item-1:hover {
+    background-color: white;
+    color: var(--dark);
+}
+
+/* format footer and page sections  */
 
 .footer {
     display: flex;
@@ -102,24 +155,127 @@ section h2 {
 
 .footer-links {
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
 }
+
+
+.page-section {
+    margin: 25px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    }
 
 .page-section h2 {
     display: flex;
+    flex-wrap: wrap;
+    color: var(--primary);
+    -ms-flex-direction: ROW;
     width: 20%;
     margin-top: 0px;
     border-right: 4px solid;
-    border-bottom: 4px solid var(--primary);
     margin-bottom: 20px;
     padding-bottom: 10px;
     text-align: left;
     font-size: 5vw;
-  }
+      }
 
-  @media screen and (max-width: 980px) {
+.about-me-label  {
+    height: 200px;
+
+}
+
+
+.page-wrapper {
+    max-width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+      
+main {
+    margin-top: 20px;
+    margin-bottom: 45px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.work-header {
+    height: 620px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.four-categories {
+    display: flex;
+    width: 80%;
+}
+
+section h2 {
+    width: 20%;
+    text-align: right;
+}
+
+/* media queries to stack flex boxes */
+
+@media screen and (max-width: 8000px) {
     header {
       padding: 0 0 10px 0;
       justify-content: center;
       text-align: center;
     }
-    
+  
+    nav h1 {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .portfolio {
+        align-items: center;
+    }
+  
+    .page-section > h2,
+    .page-section > div {
+      flex: 0 0 100%;
+    }
+  
+    .page-section > h2 {
+      border-right: none;
+      border-bottom: 4px solid var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 5px;
+      text-align: left;
+      font-size: 7vw;
+     height: 80px;
+    }
+  }
+  
+@media screen and (max-width: 750px) {
+    .flex-item,
+    .flex-item:first-child {
+      flex-basis: 100%;
+    }
+  
+    .flex-item:first-child {
+      min-height: 150px;
+    }
+  
+  
+    .footer-links {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+
+  }
+  

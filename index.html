@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- html standard head  -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,41 +9,43 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
+<!-- header and nav bar  -->
 <body>
     <header>
         <nav>
-            <div class="left-heading">Left Heading</div>
+            <h1 class="left-heading hover-item-1">Pravesh Mukhi Portfolio</h1>
             <div class="portfolio"> 
-                <a href="#">Portfolio 1</a>
-                <a href="#">Portfolio 2</a>
-                <a href="#">Portfolio 3</a>
-                <a href="#">Portfolio 4</a>
+                <a href="#about-me" class="hover-item-1">About Me</a>
+                <a href="#work" class="hover-item-1">Work</a>
+                <a href="#contact-me" class="hover-item-1">Contact Me</a>
+                <a href="" class="hover-item-1">Resume (To be Added Later)</a>
             </div>
         </nav>
     </header>
+
+    <!-- main section including about me and project names  -->
     <main>
         <section class="page-section about-me-parent" id="about-parent">
-            <h2>About Me</h2>
-            <span class="about-me">About Me: <span class="Name">Pravesh Mukhi</span></span>
-        </section>
-        <section class="page-section work">
-            <h2>Work</h2>
-            <span class="page-section four-categories">
-                <a href="#" class="box">Box 1</a>
-                <a href="#" class="box">Box 2</a>
-                <a href="#" class="box">Box 3</a>
-                <a href="#" class="box">Box 4</a>
+            <h2 class="about-me-label">About Me</h2>
+            <span class="about-me" id="about-me">Pravesh Mukhi is a beginner Software Developer and is currently participating in Columbia University's Full Stack Software Development Prpgram. He currently is a Tech Consultant at PwC. In addition to Software Development, Prav has consistently utilized Tableau, UiPath, Alteryx, and ABBYY. </span>
+            <h2 class="work-header" id="work">Work</h2>
+            <span class=four-categories>
+                <a href="https://www.linkedin.com/in/praveshmukhi/" class="flex-item box" id="box-1">LinkedIn</a>
+                <a href="https://pmukhi12.github.io/code-refactor-2/" class="flex-item box hover-item-2" id="box-2">Code Refactor</a>
+                <a href="#" class="flex-item box hover-item-2" id="box-3">Project 3 (To be Added Later)</a>
+                <a href="#" class="flex-item box hover-item-2" id="box-4">Project 4 (To be Added Later)</a>
             </span>
-        </section>   
-        <section class=" page-section footer">
-            <h2>Contact Me</h2>
-            <div class="footer-links">
-                <a href="tel:+15555555555">555.555.5555</a>
-                <a href="te href="mailto:lernantino@website.com">lernantino@website.com</a>
-                <a href="m href="tea href="#">GitHub</a>
-                <a href="# href="ma">Twitter</a>
-                <a href="#">Spotify</a>
-            </div>
+        </section> 
+    
+    <!-- footer and links  -->
+        <section class="page-section footer">
+            <h2 id="contact-me" >Contact Me</h2>
+            <span class="footer-links">
+                <a href="">praveshmukhi@gmail.com</a>
+                <a href="https://github.com/pmukhi12">GitHub</a>
+                <a href="">YouTube (To be Added Later)</a>
+                <a href="">Twitter (To be Added Later)</a>
+            </span>
         <section>
     </main>
 
