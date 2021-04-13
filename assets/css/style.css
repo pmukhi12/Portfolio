@@ -140,7 +140,7 @@ main {
     color: var(--dark);
 }
 
-/* format footer and page sections  */
+/* footer and footer links  */
 
 .footer {
     display: flex;
@@ -190,6 +190,7 @@ main {
 
 }
 
+/* additional flex wrapping of main sections  */
 
 .page-wrapper {
     max-width: 88%;
@@ -225,9 +226,9 @@ section h2 {
     text-align: right;
 }
 
-/* media queries to stack flex boxes */
+/* media queries to change based on mobile vs desktop  */
 
-@media screen and (max-width: 8000px) {
+@media screen and (max-width: 800px) {
     header {
       padding: 0 0 10px 0;
       justify-content: center;
@@ -253,7 +254,7 @@ section h2 {
       border-right: none;
       border-bottom: 4px solid var(--primary);
       margin-bottom: 20px;
-      padding-bottom: 5px;
+      padding-bottom: 10px;
       text-align: left;
       font-size: 7vw;
      height: 80px;
